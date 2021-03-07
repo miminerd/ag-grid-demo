@@ -1,0 +1,35 @@
+<!--<ag-grid-angular  #agGrid
+    style="width: auto; height: 500px;"
+    class="ag-theme-alpine"
+    [rowData]="rowData  | async"
+    [columnDefs]="columnDefs"
+    rowSelection="multiple"
+    [defaultColDef]="defaultColDef"
+   [autoGroupColumnDef]="autoGroupColumnDef"
+>
+</ag-grid-angular>
+
+<button (click)="getSelectedRows()">Get Selected Rows</button>-->
+
+
+
+<button (click)="getSelectedRows()">Get Selected Rows</button>
+
+<ag-grid-angular style="width: 100%; padding-right: 20px; height: 650px;" class="ag-theme-alpine"
+[columnDefs]="columnDefs"
+[sideBar]="sideBar"
+[rowData]="rowData"
+[defaultColDef]="defaultColDef"
+[frameworkComponents]="frameworkComponents"
+rowSelection="multiple"
+[modules]="modules"
+enableCharts
+enableRangeSelection
+
+
+(gridReady)="onGridReady($event)"
+(modelUpdated)="onModelUpdated()"
+(cellClicked)="onCellClicked($event)"
+(cellDoubleClicked)="onCellDoubleClicked($event)"
+(cellContextMenu)="onCellContextMenu($event)">
+</ag-grid-angular>
